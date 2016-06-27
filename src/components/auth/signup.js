@@ -11,6 +11,8 @@ class Signup extends Component {
         <fieldset className="form-group">
           <label>Email:</label>
           <input className="form-control" {...email} />
+          {email.touched && email.error && <div className="error">{email.error}</div>}
+
         </fieldset>
         <fieldset className="form-group">
           <label>Password:</label>
@@ -20,6 +22,8 @@ class Signup extends Component {
         <fieldset className="form-group">
           <label>Confirm Password:</label>
           <input className="form-control" {...passwordConfirm} type="password" />
+          {passwordConfirm.touched && passwordConfirm.error && <div className="error">{passwordConfirm.error}</div>}
+
         </fieldset>
         <button action="submit" className="btn btn-primary">Sign up!</button>
       </form>
